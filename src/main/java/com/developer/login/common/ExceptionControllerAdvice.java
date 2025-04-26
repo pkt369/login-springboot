@@ -35,7 +35,6 @@ public class ExceptionControllerAdvice {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(NotVerifyUserException.class)
     public ResponseEntity<ExceptionDto> notVerifyUserException(NotVerifyUserException e) {
-        log.error(e.getMessage(), e);
         ExceptionDto exceptionDto = ExceptionDto.builder()
                 .code(400)
                 .status("not_verify")
@@ -55,6 +54,12 @@ public class ExceptionControllerAdvice {
     @ExceptionHandler(ResetEmailSnsLoginException.class)
     public ResponseEntity<String> resetEmailSnsLoginException(ResetEmailSnsLoginException e) {
         log.error(e.getMessage(), e);
+        return ResponseEntity.badRequest().body(e.getMessage());
+    }
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(NoExistUserException.class)
+    public ResponseEntity<String> noExistUserException(NoExistUserException e) {
         return ResponseEntity.badRequest().body(e.getMessage());
     }
 }
