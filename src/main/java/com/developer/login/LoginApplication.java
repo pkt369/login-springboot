@@ -1,13 +1,13 @@
-package com.login.sejun;
+package com.developer.login;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SejunApplication {
+public class LoginApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SejunApplication.class, args);
+		SpringApplication.run(LoginApplication.class, args);
 	}
 
 }

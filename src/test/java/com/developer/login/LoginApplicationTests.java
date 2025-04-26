@@ -1,10 +1,10 @@
-package com.login.sejun;
+package com.developer.login;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SejunApplicationTests {
+class LoginApplicationTests {
 
 	@Test
 	void contextLoads() {
